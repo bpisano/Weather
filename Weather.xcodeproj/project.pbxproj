@@ -33,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5036E7C322B7C97200297891 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		5080649222B502B500FE4756 /* CityStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityStore.swift; sourceTree = "<group>"; };
 		A42101F522B2A49600A06E7E /* CityFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityFinder.swift; sourceTree = "<group>"; };
 		A47F0D5022B12C2500A1D9C7 /* Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,6 +84,7 @@
 		A47F0D4722B12C2500A1D9C7 = {
 			isa = PBXGroup;
 			children = (
+				5036E7C322B7C97200297891 /* README.md */,
 				A47F0D5222B12C2500A1D9C7 /* Weather */,
 				A47F0D5122B12C2500A1D9C7 /* Products */,
 			);

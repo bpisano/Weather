@@ -10,7 +10,7 @@ import Foundation
 
 class WeatherManager {
     
-    static let key: String = "659f92259f33870ed97fe18ee3f941f0" // Enter your darkSky API Key here
+    static let key: String = "" // Enter your darkSky API Key here
     static let baseURL: String = "https://api.darksky.net/forecast/\(key)/"
     
 }
