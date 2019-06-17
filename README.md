@@ -1,12 +1,14 @@
 #  Weather
 
+![](Images/Banner.png)
+
 ## What is Weather ?
 
 Weather is a simple app that displays weather in SwiftUI. I saw a lot of tutorials on the web, that shows very basic feature of SwiftUI. I tried to combine all of them in one simple app to demonstrate how SwiftUI works. It shows asynchronous data fetch, binding and how to build user interfaces with SwiftUI.
 
 ## Installation
 
-Weather use the Dark Sky API to fetch weather data. To run this app, you'll need a Dark Sky API key. This is entirely free. To do so :
+Weather use the [Dark Sky API](https://darksky.net/dev) to fetch weather data. To run this app, you'll need a Dark Sky API key. This is entirely free. To do so :
 1. Create your account [here](https://darksky.net/dev/register) and get your Dark Sky API key.
 2. Open the project, and go to the `WeatherManager.swift` file.
 3. Replace `static let key: String = ""` by your key.
