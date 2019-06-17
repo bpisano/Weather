@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5036E7C522B7CED100297891 /* Banner.png in Resources */ = {isa = PBXBuildFile; fileRef = 5036E7C422B7CED100297891 /* Banner.png */; };
 		5080649322B502B500FE4756 /* CityStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5080649222B502B500FE4756 /* CityStore.swift */; };
 		A42101F622B2A49600A06E7E /* CityFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42101F522B2A49600A06E7E /* CityFinder.swift */; };
 		A47F0D5422B12C2500A1D9C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47F0D5322B12C2500A1D9C7 /* AppDelegate.swift */; };
@@ -34,6 +35,7 @@
 
 /* Begin PBXFileReference section */
 		5036E7C322B7C97200297891 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		5036E7C422B7CED100297891 /* Banner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Banner.png; sourceTree = "<group>"; };
 		5080649222B502B500FE4756 /* CityStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityStore.swift; sourceTree = "<group>"; };
 		A42101F522B2A49600A06E7E /* CityFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityFinder.swift; sourceTree = "<group>"; };
 		A47F0D5022B12C2500A1D9C7 /* Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,6 +74,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5036E7C622B7CED600297891 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				5036E7C422B7CED100297891 /* Banner.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		5080649422B508FB00FE4756 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				5036E7C322B7C97200297891 /* README.md */,
+				5036E7C622B7CED600297891 /* Images */,
 				A47F0D5222B12C2500A1D9C7 /* Weather */,
 				A47F0D5122B12C2500A1D9C7 /* Products */,
 			);
@@ -245,6 +256,7 @@
 				A47F0D6022B12C2700A1D9C7 /* LaunchScreen.storyboard in Resources */,
 				A47F0D5D22B12C2700A1D9C7 /* Preview Assets.xcassets in Resources */,
 				A47F0D5A22B12C2700A1D9C7 /* Assets.xcassets in Resources */,
+				5036E7C522B7CED100297891 /* Banner.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
