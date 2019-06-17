@@ -19,7 +19,7 @@ Weather require `Xcode 11.0`.
 
 This app have some issues probably due to SwiftUI as it is in beta. Here are the bugs I can list here. Feel free to correct them if you find how to.
 
-#### Modal View
+### Modal View
 Closing a modal view doesn't seems to work. In the `NewCityView.swift` I tried to use a binding variable to close the modal view :
 ```swift
 struct NewCityView : View {
@@ -30,8 +30,12 @@ struct NewCityView : View {
 ```
 This variable doesn't have any effect on the modal presentation.
 
-#### Layout
+### Layout
 There are some layout issues in the hourly weather ScrollView. The text is wrapped where it should not be. I'm also using icons from the SF Symbols. But some of them are not working and they seems not to be all  correctly aligned.
+
+### Getting weather
+
+This app does not fetch weather for the city you add. It is configured to fetch weather from a hard coded location. This is not really a bug but a missing feature. I'll probably add it later.
 
 ## Contribution
 Feel free to give some contribution to this very basic project. This will help us to better understand SwiftUI and how to use it to get started.
