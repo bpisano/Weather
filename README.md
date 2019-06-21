@@ -10,10 +10,14 @@ Weather is a simple app that displays weather in SwiftUI. I saw a lot of tutoria
 
 Weather use the [Dark Sky API](https://darksky.net/dev) to fetch weather data. To run this app, you'll need a Dark Sky API key. This is entirely free. To do so :
 1. Create your account [here](https://darksky.net/dev/register) and get your Dark Sky API key.
-2. Open the project, and go to the `WeatherManager.swift` file.
-3. Replace `static let key: String = ""` by your key.
+2. Open the project, and go to the `NetworkManager.swift` file.
+3. Replace `static let darkSky: String = ""` by your key.
 
 If you want to add new cities to the app, you'll need a free Google Places API key. This is an optionnal feature so you don't need this key to get a preview of this app. To get one, follow the instructions on the official [Google documentation](https://developers.google.com/places/web-service/get-api-key?authuser=1&refresh=1). Dont forget to activate the Google Places API on your project in the Google Cloud Console.
+
+Once you get your key :
+1. Go to the `NetworkManager.swift` file.
+2. Replace `static let googleMaps: String = ""` by your key.
 
 Weather require **Xcode 11.0** and **iOS 13.0**.
 
