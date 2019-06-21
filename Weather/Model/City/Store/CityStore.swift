@@ -13,7 +13,7 @@ class CityStore: BindableObject {
     
     let didChange = PassthroughSubject<CityStore, Never>()
     
-    var cities: [City] = [City(name: "Chambery")] {
+    var cities: [City] = [City()] {
         didSet {
             didChange.send(self)
         }

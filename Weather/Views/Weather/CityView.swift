@@ -10,7 +10,7 @@ import SwiftUI
 
 struct CityView : View {
     
-    @ObjectBinding var city = City(name: "Chambéry")
+    @ObjectBinding var city: City
     
     var body: some View {
         List {
@@ -33,10 +33,10 @@ struct CityView : View {
     
 }
 
-#if DEBUG
-struct ContentView_Previews : PreviewProvider {
-    static var previews: some View {
-        CityView()
-    }
-}
-#endif
+//#if DEBUG
+//struct ContentView_Previews : PreviewProvider {
+//    static var previews: some View {
+//        CityView()
+//    }
+//}
+//#endif
