@@ -13,32 +13,18 @@ Weather use the [Dark Sky API](https://darksky.net/dev) to fetch weather data. T
 2. Open the project, and go to the `WeatherManager.swift` file.
 3. Replace `static let key: String = ""` by your key.
 
-Weather require `Xcode 11.0`.
+If you want to add new cities to the app, you'll need a free Google Places API key. This is an optionnal feature so you don't need this key to get a preview of this app. To get one, follow the instructions on the official [Google documentation](https://developers.google.com/places/web-service/get-api-key?authuser=1&refresh=1). Dont forget to activate the Google Places API on your project in the Google Cloud Console.
+
+Weather require **Xcode 11.0** and **iOS 13.0**.
 
 ## Issues
 
-This app have some issues probably due to SwiftUI as it is in beta. Here are the bugs I can list here. Feel free to correct them if you find how to.
-
-### Modal View
-Closing a modal view doesn't seems to work. In the `NewCityView.swift` I tried to use a binding variable to close the modal view :
-```swift
-struct NewCityView : View {
-
-    @Binding var isAddingCity: Bool
-
-}
-```
-This variable doesn't have any effect on the modal presentation.
-
-### Layout
-There are some layout issues in the hourly weather ScrollView. The text is wrapped where it should not be. I'm also using icons from the SF Symbols. But some of them are not working and they seems not to be all  correctly aligned.
-
-### Getting weather
-
-This app does not fetch weather for the city you add. It is configured to fetch weather from a hard coded location. This is not really a bug but a missing feature. I'll probably add it later.
+This app have some issues probably due to SwiftUI as it is in beta. The layout of the app is sometimes bugy. If you find bugs about SwiftUI, report them to Apple as soon as possible. 
 
 ## Contribution
+
 Feel free to give some contribution to this very basic project. This will help us to better understand SwiftUI and how to use it to get started.
 
 ## Author
+
 This app was made by me, Benjamin Pisano. If you want to contact me, you can send me DM on Twitter [@benjamin_pisano](https://twitter.com/benjamin_pisano). You can also see [my app](https://apps.apple.com/fr/app/aria/id1431709436?mt=12) on the Mac AppStore.
