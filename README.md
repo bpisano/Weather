@@ -17,7 +17,7 @@ Weather use the [Dark Sky API](https://darksky.net/dev) to fetch weather data. T
 
 ### Google Places
 
-If you want to add new cities to the app, you'll need a free Google Places API key. This is an optionnal feature so you don't need this key to get a preview of this app. To get one, follow the instructions on the official [Google documentation](https://developers.google.com/places/web-service/get-api-key?authuser=1&refresh=1). Dont forget to activate the Google Places API on your project in the Google Cloud Console.
+If you want to add new cities to the app, you'll need a free Google Places API key. This is an optional feature so you don't need this key to get a preview of this app. To get one, follow the instructions on the official [Google documentation](https://developers.google.com/places/web-service/get-api-key?authuser=1&refresh=1). Dont forget to activate the Google Places API on your project in the Google Cloud Console.
 
 Once you get your key :
 1. Go to the `NetworkManager.swift` file.
