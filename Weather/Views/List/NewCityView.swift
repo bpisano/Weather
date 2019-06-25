@@ -10,13 +10,12 @@ import SwiftUI
 
 struct NewCityView : View {
     
-    @Binding var isAddingCity: Bool
-    
     @State private var search: String = ""
+    @State private var isValidating: Bool = false
+    @ObjectBinding private var completer: CityCompletion = CityCompletion()
     
-    @ObjectBinding var completer: CityCompletion = CityCompletion()
+    @Binding var isAddingCity: Bool
     @EnvironmentObject var cityStore: CityStore
-    @Environment(\.isPresented) var isPresented: Binding<Bool>?
     
     var body: some View {
         NavigationView {
@@ -32,7 +31,6 @@ struct NewCityView : View {
                         Button(action: {
                             self.addCity(from: prediction)
                             self.isAddingCity = false
-                            self.isPresented?.value = false
                         }) {
                             Text(prediction.description)
                                 .foregroundColor(.primary)
@@ -40,6 +38,7 @@ struct NewCityView : View {
                     }
                 }
             }
+                .disabled(isValidating)
                 .navigationBarTitle(Text("Add City"))
                 .navigationBarItems(leading: cancelButton)
                 .listStyle(.grouped)
@@ -55,6 +54,8 @@ struct NewCityView : View {
     }
     
     private func addCity(from prediction: CityCompletion.Prediction) {
+        isValidating = true
+        
         CityValidation.validateCity(withID: prediction.id) { (city) in
             if let city = city {
                 DispatchQueue.main.async {
@@ -62,6 +63,8 @@ struct NewCityView : View {
                     self.isAddingCity = false
                 }
             }
+            
+            self.isValidating = false
         }
     }
     
