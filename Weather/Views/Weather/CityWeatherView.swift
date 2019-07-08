@@ -1,5 +1,5 @@
 //
-//  CityView.swift
+//  CityWeatherView.swift
 //  Weather
 //
 //  Created by Lunabee on 12/06/2019.
@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct CityView : View {
+struct CityWeatherView : View {
     
     @ObjectBinding var city: City
     
@@ -17,11 +17,11 @@ struct CityView : View {
             Section(header: Text("Now")) {
                 CityHeaderView(city: city)
             }
-            
+
             Section(header: Text("Hourly")) {
                 CityHourlyView(city: city)
             }
-            
+
             Section(header: Text("This week")) {
                 ForEach(city.weather?.week.list ?? []) { day in
                     CityDailyView(day: day)
@@ -36,7 +36,7 @@ struct CityView : View {
 //#if DEBUG
 //struct ContentView_Previews : PreviewProvider {
 //    static var previews: some View {
-//        CityView()
+//        CityWeatherView()
 //    }
 //}
 //#endif

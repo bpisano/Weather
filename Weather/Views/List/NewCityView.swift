@@ -21,7 +21,7 @@ struct NewCityView : View {
         NavigationView {
             List {
                 Section {
-                    TextField($search, placeholder: Text("Search City")) {
+                    TextField("Search City", text: $search) {
                         self.completer.search(self.search)
                     }
                 }

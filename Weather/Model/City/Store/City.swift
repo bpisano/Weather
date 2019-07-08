@@ -16,6 +16,11 @@ class City: BindableObject {
     var name: String
     var longitude: Double
     var latitude: Double
+    var image: UIImage? {
+        didSet {
+            didChange.send(self)
+        }
+    }
     var weather: Weather? {
         didSet {
             didChange.send(self)

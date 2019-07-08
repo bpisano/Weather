@@ -13,7 +13,7 @@ class CityCompletionManager: NSObject {
     var completionTask: URLSessionDataTask?
     
     func getCompletion(for search: String, _ completion: @escaping (_ results: [CityCompletion.Prediction]) -> Void) {
-        guard let urlString = NetworkManager.APIURL.cityCompletion(for: search).addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed), let url = URL(string: urlString) else {
+        guard let url = URL(string: NetworkManager.APIURL.cityCompletion(for: search)) else {
             completion([])
             return
         }

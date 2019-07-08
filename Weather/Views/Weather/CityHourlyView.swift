@@ -15,7 +15,7 @@ struct CityHourlyView : View {
     private let rowHeight: CGFloat = 110
     
     var body: some View {
-        ScrollView(alwaysBounceHorizontal: true, showsHorizontalIndicator: false) {
+        ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: 16) {
                 ForEach(city.weather?.hours.list ?? []) { hour in
                     VStack(spacing: 16) {
@@ -28,11 +28,10 @@ struct CityHourlyView : View {
                     }
                 }
             }
-                .frame(height: rowHeight)
-                .padding(.trailing)
+            .padding([.trailing, .leading])
         }
-            .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
-            .frame(height: rowHeight)
+        .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+        .padding([.top, .bottom])
     }
     
 }
