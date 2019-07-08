@@ -12,8 +12,8 @@ class NetworkManager: NSObject {
     
     struct Key {
         
-        static let darkSky: String = "42cf1247b7825659debfcdf6e885ae08" // Enter your darkSky API key here
-        static let googleMaps: String = "AIzaSyC00wf-_BfjX_2AEVrUFrQsSAMsFBDSVuE" // Enter your google maps API key here
+        static let darkSky: String = "" // Enter your darkSky API key here
+        static let googleMaps: String = "" // Enter your google maps API key here
         
     }
     
