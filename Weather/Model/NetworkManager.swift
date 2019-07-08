@@ -12,9 +12,8 @@ class NetworkManager: NSObject {
     
     struct Key {
         
-        static let darkSky: String = "" // Enter your darkSky API key here
-        static let googleMaps: String = "" // Enter your google maps API key here
-        static let flickr: String = "" // Enter your flickr API key here
+        static let darkSky: String = "42cf1247b7825659debfcdf6e885ae08" // Enter your darkSky API key here
+        static let googleMaps: String = "AIzaSyC00wf-_BfjX_2AEVrUFrQsSAMsFBDSVuE" // Enter your google maps API key here
         
     }
     
@@ -31,11 +30,7 @@ class NetworkManager: NSObject {
         static func cityData(for placeID: String) ->  String {
             return "https://maps.googleapis.com/maps/api/place/details/json?placeid=\(placeID)&key=\(NetworkManager.Key.googleMaps)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
         }
-        
-        static func cityImage(for cityName: String) -> String {
-            return "https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=\(NetworkManager.Key.flickr)&tags=city&tag_mode=all&text=\(cityName)&sort=relevance&privacy_filter=1&content_type=1&geo_context=2&extras=url_l,owner_name&per_page=5&page=1&format=json&nojsoncallback=1".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
-        }
-        
+                
     }
         
 }

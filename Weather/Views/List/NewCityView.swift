@@ -64,7 +64,9 @@ struct NewCityView : View {
                 }
             }
             
-            self.isValidating = false
+            DispatchQueue.main.async {
+                self.isValidating = false
+            }
         }
     }
     
