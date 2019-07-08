@@ -12,9 +12,9 @@ class NetworkManager: NSObject {
     
     struct Key {
         
-        static let darkSky: String = "521af98cdb01ee0cece90c471d84fdb7" // Enter your darkSky API key here
-        static let googleMaps: String = "AIzaSyBWYE8szpmx-huckRp7oD1qSY5Gdxw1VjM" // Enter your google maps API key here
-        static let flickr: String = "a28844ea5b4754351e29089c690dffe2" // Enter your flickr API key here
+        static let darkSky: String = "" // Enter your darkSky API key here
+        static let googleMaps: String = "" // Enter your google maps API key here
+        static let flickr: String = "" // Enter your flickr API key here
         
     }
     
