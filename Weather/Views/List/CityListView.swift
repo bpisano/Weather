@@ -38,8 +38,11 @@ struct CityListView : View {
         }) {
             Image(systemName: "plus.circle.fill")
                 .font(.title)
+        }.sheet(isPresented: $isAddingCity, onDismiss: {
+            self.isAddingCity = false
+        }) {
+            self.newCityView
         }
-            .presentation(isAddingCity ? newCityView : nil)
     }
     
     private func delete(at offsets: IndexSet) {
@@ -59,10 +62,8 @@ struct CityListView : View {
         cityStore.cities.insert(contentsOf: removeCities, at: destination)
     }
     
-    private var newCityView: Modal {
-        Modal(NewCityView(isAddingCity: $isAddingCity).environmentObject(cityStore)) {
-            self.isAddingCity = false
-        }
+    private var newCityView: some View {
+        NewCityView(isAddingCity: $isAddingCity).environmentObject(cityStore)
     }
     
 }

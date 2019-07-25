@@ -11,11 +11,11 @@ import Combine
 
 class CityCompletion: NSObject, BindableObject {
     
-    var didChange = PassthroughSubject<CityCompletion, Never>()
+    var willChange = PassthroughSubject<CityCompletion, Never>()
     
     var predictions: [CityCompletion.Prediction] = [] {
         didSet {
-            didChange.send(self)
+            willChange.send(self)
         }
     }
     

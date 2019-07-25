@@ -24,7 +24,7 @@ struct CityRow : View {
                         .foregroundColor(Color.gray)
                         .font(.title)
                     Text(city.weather?.current.temperature.formattedTemperature ?? "-ºC")
-                        .color(.gray)
+                        .foregroundColor(.gray)
                         .font(.title)
                 }
             }

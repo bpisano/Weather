@@ -35,7 +35,7 @@ struct CityDailyView : View {
         VStack(alignment: .trailing) {
             Text(min ? "min" : "max")
                 .font(.footnote)
-                .color(.gray)
+                .foregroundColor(.gray)
             Text(min ? day.minTemperature.formattedTemperature : day.maxTemperature.formattedTemperature)
                 .font(.headline)
         }

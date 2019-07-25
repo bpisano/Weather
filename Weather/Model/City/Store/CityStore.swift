@@ -11,11 +11,11 @@ import Combine
 
 class CityStore: BindableObject {
     
-    let didChange = PassthroughSubject<CityStore, Never>()
+    let willChange = PassthroughSubject<CityStore, Never>()
     
     var cities: [City] = [City()] {
         didSet {
-            didChange.send(self)
+            willChange.send(self)
         }
     }
     

@@ -11,19 +11,19 @@ import Combine
 
 class City: BindableObject {
     
-    var didChange = PassthroughSubject<City, Never>()
+    var willChange = PassthroughSubject<City, Never>()
     
     var name: String
     var longitude: Double
     var latitude: Double
     var image: UIImage? {
         didSet {
-            didChange.send(self)
+            willChange.send(self)
         }
     }
     var weather: Weather? {
         didSet {
-            didChange.send(self)
+            willChange.send(self)
         }
     }
     
