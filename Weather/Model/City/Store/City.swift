@@ -9,28 +9,21 @@
 import SwiftUI
 import Combine
 
-class City: BindableObject {
-    
-    var willChange = PassthroughSubject<City, Never>()
-    
+class City: ObservableObject{
+        
     var name: String
     var longitude: Double
     var latitude: Double
-    var image: UIImage? {
-        didSet {
-            willChange.send(self)
-        }
-    }
-    var weather: Weather? {
-        didSet {
-            willChange.send(self)
-        }
-    }
+    
+    @Published var image: UIImage?
+    @Published var weather: Weather?
     
     init() {
         self.name = "Chambéry"
         self.longitude = 5.915807
         self.latitude = 45.572353
+        self.image = nil
+        self.weather = nil
         self.getWeather()
     }
     
@@ -38,6 +31,8 @@ class City: BindableObject {
         self.name = data.name
         self.longitude = data.geometry.location.longitude
         self.latitude = data.geometry.location.latitude
+        self.image = nil
+        self.weather = nil
         self.getWeather()
     }
     

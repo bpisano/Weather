@@ -9,17 +9,11 @@
 import SwiftUI
 import Combine
 
-class CityCompletion: NSObject, BindableObject {
-    
-    var willChange = PassthroughSubject<CityCompletion, Never>()
-    
-    var predictions: [CityCompletion.Prediction] = [] {
-        didSet {
-            willChange.send(self)
-        }
-    }
+class CityCompletion: NSObject, ObservableObject {
     
     private var completionManager: CityCompletionManager
+        
+    @Published var predictions: [CityCompletion.Prediction] = []
     
     override init() {
         predictions = []

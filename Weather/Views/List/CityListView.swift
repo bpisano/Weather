@@ -19,7 +19,7 @@ struct CityListView : View {
         NavigationView {
             List {
                 Section(header: Text("Your Cities")) {
-                    ForEach(cityStore.cities) { city in
+                    ForEach(cityStore.cities, id: \.name) { city in
                         CityRow(city: city)
                     }
                     .onDelete(perform: delete)
@@ -63,7 +63,7 @@ struct CityListView : View {
     }
     
     private var newCityView: some View {
-        NewCityView(isAddingCity: $isAddingCity).environmentObject(cityStore)
+        NewCityView().environmentObject(cityStore)
     }
     
 }

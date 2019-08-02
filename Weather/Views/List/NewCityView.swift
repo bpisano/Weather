@@ -12,9 +12,9 @@ struct NewCityView : View {
     
     @State private var search: String = ""
     @State private var isValidating: Bool = false
-    @ObjectBinding private var completer: CityCompletion = CityCompletion()
+    @ObservedObject private var completer: CityCompletion = CityCompletion()
     
-    @Binding var isAddingCity: Bool
+    @Environment(\.presentationMode) var presentationMode
     @EnvironmentObject var cityStore: CityStore
     
     var body: some View {
@@ -30,7 +30,7 @@ struct NewCityView : View {
                     ForEach(completer.predictions) { prediction in
                         Button(action: {
                             self.addCity(from: prediction)
-                            self.isAddingCity = false
+                            self.presentationMode.value.dismiss()
                         }) {
                             Text(prediction.description)
                                 .foregroundColor(.primary)
@@ -41,13 +41,13 @@ struct NewCityView : View {
                 .disabled(isValidating)
                 .navigationBarTitle(Text("Add City"))
                 .navigationBarItems(leading: cancelButton)
-                .listStyle(.grouped)
+                .listStyle(GroupedListStyle())
         }
     }
     
     private var cancelButton: some View {
         Button(action: {
-            self.isAddingCity = false
+            self.presentationMode.value.dismiss()
         }) {
             Text("Cancel")
         }
@@ -60,7 +60,7 @@ struct NewCityView : View {
             if let city = city {
                 DispatchQueue.main.async {
                     self.cityStore.cities.append(city)
-                    self.isAddingCity = false
+                    self.presentationMode.value.dismiss()
                 }
             }
             

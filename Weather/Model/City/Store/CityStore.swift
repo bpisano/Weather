@@ -9,14 +9,8 @@
 import SwiftUI
 import Combine
 
-class CityStore: BindableObject {
-    
-    let willChange = PassthroughSubject<CityStore, Never>()
-    
-    var cities: [City] = [City()] {
-        didSet {
-            willChange.send(self)
-        }
-    }
+class CityStore: ObservableObject {
+        
+    @Published var cities: [City] = [City()]
     
 }

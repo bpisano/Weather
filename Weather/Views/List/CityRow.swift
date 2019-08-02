@@ -10,7 +10,7 @@ import SwiftUI
 
 struct CityRow : View {
     
-    @ObjectBinding var city: City
+    @ObservedObject var city: City
     
     var body: some View {
         NavigationLink(destination: CityWeatherView(city: city)) {
@@ -28,7 +28,7 @@ struct CityRow : View {
                         .font(.title)
                 }
             }
-                .padding([.trailing, .top, .bottom])
+            .padding([.trailing, .top, .bottom])
         }
     }
     

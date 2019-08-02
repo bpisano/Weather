@@ -10,7 +10,7 @@ import SwiftUI
 
 struct CityHourlyView : View {
     
-    @ObjectBinding var city: City
+    @ObservedObject var city: City
     
     private let rowHeight: CGFloat = 110
     

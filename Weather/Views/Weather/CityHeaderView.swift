@@ -10,7 +10,7 @@ import SwiftUI
 
 struct CityHeaderView: View {
     
-    @ObjectBinding var city: City
+    @ObservedObject var city: City
     
     var temperature: String {
         guard let temperature = city.weather?.current.temperature else {
@@ -30,7 +30,7 @@ struct CityHeaderView: View {
             }
             Spacer()
         }
-            .frame(height: 110)
+        .frame(height: 110)
     }
     
 }
