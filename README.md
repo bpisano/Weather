@@ -10,7 +10,7 @@ Weather is a simple app that displays weather in SwiftUI. I saw a lot of tutoria
 
 ### Dark Sky
 
-Weather use the [Dark Sky API](https://darksky.net/dev) to fetch weather data. To run this app, you'll need a Dark Sky API key. This is entirely free. To do so :
+Weather uses the [Dark Sky API](https://darksky.net/dev) to fetch weather data. To run this app, you'll need a Dark Sky API key. This is entirely free. To do so :
 1. Create your account [here](https://darksky.net/dev/register) and get your Dark Sky API key.
 2. Open the project, and go to the `NetworkManager.swift` file.
 3. Replace `static let darkSky: String = ""` by your key.
@@ -23,15 +23,15 @@ Once you get your key :
 1. Go to the `NetworkManager.swift` file.
 2. Replace `static let googleMaps: String = ""` by your key.
 
-Weather require **Xcode 11.0** and **iOS 13.0**.
+Weather requires **Xcode 11.0** and **iOS 13.0**.
 
 ## Issues
 
-This app have some issues probably due to SwiftUI as it is in beta. The layout of the app is sometimes bugy. If you find bugs about SwiftUI, report them to Apple as soon as possible. 
+This app has some issues probably due to SwiftUI currently being in beta. The layout of the app can be buggy at times. If you find bugs involving SwiftUI, report them to Apple as soon as possible. 
 
 ## Contribution
 
-Feel free to give some contribution to this very basic project. This will help us to better understand SwiftUI and how to use it to get started.
+Feel free to contribute to this very basic project. This will help us to better understand SwiftUI and how to use it as a starting point.
 
 ## Author
 
