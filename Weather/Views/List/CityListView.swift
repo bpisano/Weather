@@ -12,7 +12,7 @@ struct CityListView : View {
     
     @EnvironmentObject var cityStore: CityStore
     
-    @State var isAddingCity: Bool = false
+    @State var isPresentingModal: Bool = false
     @State private var isEditing: Bool = false
     
     var body: some View {
@@ -33,15 +33,12 @@ struct CityListView : View {
     
     private var addButton: some View {
         Button(action: {
-            self.isAddingCity = true
-            self.isEditing = false
+            self.isPresentingModal = true
         }) {
             Image(systemName: "plus.circle.fill")
-                .font(.title)
-        }.sheet(isPresented: $isAddingCity, onDismiss: {
-            self.isAddingCity = false
-        }) {
-            self.newCityView
+            .font(.title)
+        }.sheet(isPresented: $isPresentingModal) {
+            NewCityView().environmentObject(self.cityStore)
         }
     }
     
@@ -60,10 +57,6 @@ struct CityListView : View {
         }
         
         cityStore.cities.insert(contentsOf: removeCities, at: destination)
-    }
-    
-    private var newCityView: some View {
-        NewCityView().environmentObject(cityStore)
     }
     
 }
