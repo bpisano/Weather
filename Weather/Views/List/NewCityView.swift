@@ -30,7 +30,7 @@ struct NewCityView : View {
                     ForEach(completer.predictions) { prediction in
                         Button(action: {
                             self.addCity(from: prediction)
-                            self.presentationMode.value.dismiss()
+                            self.presentationMode.wrappedValue.dismiss()
                         }) {
                             Text(prediction.description)
                                 .foregroundColor(.primary)
@@ -47,7 +47,7 @@ struct NewCityView : View {
     
     private var cancelButton: some View {
         Button(action: {
-            self.presentationMode.value.dismiss()
+            self.presentationMode.wrappedValue.dismiss()
         }) {
             Text("Cancel")
         }
@@ -60,7 +60,7 @@ struct NewCityView : View {
             if let city = city {
                 DispatchQueue.main.async {
                     self.cityStore.cities.append(city)
-                    self.presentationMode.value.dismiss()
+                    self.presentationMode.wrappedValue.dismiss()
                 }
             }
             
